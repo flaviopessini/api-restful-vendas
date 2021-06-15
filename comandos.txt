@@ -15,3 +15,7 @@ $ npm i express express-async-errors cors
 $ npm i -D @types/express @types/cors
 
 $ npm i typeorm reflect-metadata pg
+
+$ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+
+$ docker ps -a
