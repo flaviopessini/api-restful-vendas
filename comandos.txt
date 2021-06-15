@@ -21,3 +21,9 @@ $ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postg
 $ docker ps -a
 
 $ npm run typeorm migrations:create -- -n CreateProducts
+
+$ npm run typeorm migrations:run
+
+$ npm run typeorm migrations:create -- -n CreateUsers
+
+$ npm run typeorm migrations:run
