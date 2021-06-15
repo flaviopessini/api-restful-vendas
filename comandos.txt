@@ -13,3 +13,5 @@ $ npm i -D tsconfig-paths
 $ npm i express express-async-errors cors
 
 $ npm i -D @types/express @types/cors
+
+$ npm i typeorm reflect-metadata pg
