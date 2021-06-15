@@ -1,0 +1,21 @@
+{
+  "editor.minimap.enabled": true,
+  "editor.fontSize": 16,
+  "editor.lineHeight": 24,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "formattingToggle.affects": ["formatOnSave"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.rulers": [80, 120],
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.renderLineHighlight": "gutter",
+  "terminal.integrated.fontSize": 14,
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}

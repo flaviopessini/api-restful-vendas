@@ -1,0 +1,11 @@
+$ npm i -D typescript ts-node-dev @types/node
+
+$ npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true
+
+$ npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+$ npm i -D prettier
+
+$ npm i -D eslint-config-prettier@6.15.0 eslint-plugin-prettier@3.2.0
+
+$ npm i -D tsconfig-paths
