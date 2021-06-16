@@ -31,3 +31,7 @@ $ npm run typeorm migrations:run
 $ npm i bcryptjs
 
 $ npm i -D @types/bcryptjs
+
+$ npm i jsonwebtoken
+
+$ npm i -D @types/jsonwebtoken

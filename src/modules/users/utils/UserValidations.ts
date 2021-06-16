@@ -31,4 +31,11 @@ export default class UserValidations {
       id: Joi.string().uuid().required(),
     },
   });
+
+  sessionValidation = celebrate({
+    [Segments.BODY]: {
+      email: Joi.string().email().required(),
+      password: Joi.string().required(),
+    },
+  });
 }
