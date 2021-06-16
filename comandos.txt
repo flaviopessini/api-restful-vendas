@@ -27,3 +27,7 @@ $ npm run typeorm migrations:run
 $ npm run typeorm migrations:create -- -n CreateUsers
 
 $ npm run typeorm migrations:run
+
+$ npm i bcryptjs
+
+$ npm i -D @types/bcryptjs
