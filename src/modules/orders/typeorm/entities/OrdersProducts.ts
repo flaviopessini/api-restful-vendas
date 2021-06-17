@@ -21,6 +21,12 @@ class OrdersProducts {
   @Column('int')
   quantity: number;
 
+  @Column()
+  order_id: string;
+
+  @Column()
+  product_id: string;
+
   @ManyToOne(() => Order, order => order.order_products)
   @JoinColumn({ name: 'order_id' })
   order: Order;
