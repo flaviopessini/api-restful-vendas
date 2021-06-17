@@ -39,3 +39,9 @@ $ npm i -D @types/jsonwebtoken
 $ npm i multer
 
 $ npm i -D @types/multer
+
+$ npm run typeorm migrations:create -- -n CreateUserTokens
+
+$ npm run typeorm migrations:run
+
+$ npm i date-fns
