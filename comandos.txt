@@ -45,3 +45,9 @@ $ npm run typeorm migrations:create -- -n CreateUserTokens
 $ npm run typeorm migrations:run
 
 $ npm i date-fns
+
+$ npm i nodemailer
+
+$ npm i -D @types/nodemailer
+
+$ npm i handlebars
