@@ -55,3 +55,19 @@ $ npm i handlebars
 $ npm run typeorm migration:create -- -n CreateCustomers
 
 $ npm run typeorm migration:run
+
+$ npm run typeorm migration:create -- -n CreateOrders
+
+$ npm run typeorm migration:run
+
+$ npm run typeorm migration:create -- -n CreateOrdersProducts
+
+$ npm run typeorm migration:run
+
+$ npm run typeorm migration:create -- -n AddOrderIdToOrdersProducts
+
+$ npm run typeorm migration:run
+
+$ npm run typeorm migration:create -- -n AddProductIdToOrdersProducts
+
+$ npm run typeorm migration:run
