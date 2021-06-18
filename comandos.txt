@@ -73,3 +73,5 @@ $ npm run typeorm migration:create -- -n AddProductIdToOrdersProducts
 $ npm run typeorm migration:run
 
 $ npm i typeorm-pagination
+
+$ npm i class-transformer
