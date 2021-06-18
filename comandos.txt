@@ -83,3 +83,5 @@ $ npm i class-transformer
 $ npm i redis ioredis
 
 $ npm i -D @types/redis @types/ioredis
+
+$ npm i rate-limiter-flexible
