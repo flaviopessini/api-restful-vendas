@@ -2,6 +2,8 @@ $ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postg
 
 $ docker run --name redis -p 6379:6379 -d -t redis:alpine
 
+$ docker run --name redis-client -v redisinsight:/db -p 8001:8001 -d -t redislabs/redisinsight:latest
+
 $ npm i -D typescript ts-node-dev @types/node
 
 $ npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true
