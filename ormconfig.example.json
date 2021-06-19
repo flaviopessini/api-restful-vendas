@@ -1,9 +1,9 @@
 {
   "type": "postgres",
   "host": "localhost",
-  "port": 5432,
+  "port": 45432,
   "username": "postgres",
-  "password": "postgres",
+  "password": "e8a48653851e28c69d0506508fb27fc5",
   "database": "apivendas-prod",
   "entities": ["./dist/modules/**/typeorm/entities/*.js"],
   "migrations": ["./dist/shared/typeorm/migrations/*.js"],
