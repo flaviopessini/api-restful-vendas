@@ -105,3 +105,7 @@ $ docker update --restart=unless-stopped redis
 $ ./node_modules/.bin/typeorm migration:run
 
 $ node dist/shared/http/server.js
+
+$ npm i -g pm2
+
+$ cd app/api-vendas-deploy && pm2 start dist/shared/http/server.js --name apivendas
