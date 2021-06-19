@@ -4,10 +4,10 @@
   "port": 5432,
   "username": "postgres",
   "password": "postgres",
-  "database": "apivendas",
-  "entities": ["./src/modules/**/typeorm/entities/*.ts"],
-  "migrations": ["./src/shared/typeorm/migrations/*.ts"],
+  "database": "apivendas-prod",
+  "entities": ["./dist/modules/**/typeorm/entities/*.js"],
+  "migrations": ["./dist/shared/typeorm/migrations/*.js"],
   "cli": {
-    "migrationsDir": "./src/shared/typeorm/migrations"
+    "migrationsDir": "./dist/shared/typeorm/migrations"
   }
 }
