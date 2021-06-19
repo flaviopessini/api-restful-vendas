@@ -85,3 +85,9 @@ $ npm i redis ioredis
 $ npm i -D @types/redis @types/ioredis
 
 $ npm i rate-limiter-flexible
+
+$ npm i aws-sdk
+
+$ npm i mime
+
+$ npm i -D @types/mime
