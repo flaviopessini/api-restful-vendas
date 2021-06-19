@@ -98,6 +98,10 @@ $ docker run --name postgresql -e POSTGRESQL_USERNAME=postgres -e POSTGRESQL_PAS
 
 $ docker run --name redis -e REDIS_PASSWORD=e8a48653851e28c69d0506508fb27fc5 -p 36379:6379 -d bitnami/redis:latest
 
+$ docker update --restart=unless-stopped postgresql
+
+$ docker update --restart=unless-stopped redis
+
 $ ./node_modules/.bin/typeorm migration:run
 
 $ node dist/shared/http/server.js
