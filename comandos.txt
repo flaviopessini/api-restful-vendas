@@ -91,3 +91,5 @@ $ npm i aws-sdk
 $ npm i mime
 
 $ npm i -D @types/mime
+
+$ npm i -D @babel/cli @babel/core @babel/node @babel/preset-env @babel/preset-typescript @babel/plugin-proposal-decorators @babel/plugin-proposal-class-properties babel-plugin-module-resolver babel-plugin-transform-typescript-metadata
