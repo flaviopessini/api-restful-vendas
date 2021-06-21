@@ -7,17 +7,21 @@ const productsController = new ProductsController();
 const validations = new ProductValidations();
 
 productsRouter.get('/', productsController.index);
+
 productsRouter.get('/:id', validations.showValidation, productsController.show);
+
 productsRouter.post(
   '/',
   validations.createValidation,
   productsController.create,
 );
+
 productsRouter.put(
   '/:id',
   validations.updateValidation,
   productsController.update,
 );
+
 productsRouter.delete(
   '/:id',
   validations.deleteValidation,

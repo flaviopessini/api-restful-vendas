@@ -1,36 +1,34 @@
 import AppError from '@shared/errors/AppError';
-import { getCustomRepository } from 'typeorm';
-import Product from '../infra/typeorm/entities/Product';
-import { ProductsRepository } from '../infra/typeorm/repositories/ProductsRepository';
-import redisCache from '@shared/cache/RedisCache';
-interface IRequest {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
+import { injectable, inject } from 'tsyringe';
+import { IProductsRepository } from '../domain/repositories/IProductsRepository';
+import { IProduct } from '../domain/models/IProduct';
+import { IUpdateProduct } from '../domain/models/IUpdateProduct';
 
+@injectable()
 class UpdateProductService {
+  constructor(
+    @inject('ProductsRepository')
+    private productsRepository: IProductsRepository,
+  ) {}
+
   public async execute({
     id,
     name,
     price,
     quantity,
-  }: IRequest): Promise<Product> {
-    const productRepository = getCustomRepository(ProductsRepository);
-    const product = await productRepository.findOne(id);
+  }: IUpdateProduct): Promise<IProduct> {
+    const product = await this.productsRepository.findById(id);
     if (!product) {
       throw new AppError('Produto não encontrado', 400);
     }
-    const productExists = await productRepository.findByName(name);
+    const productExists = await this.productsRepository.findByName(name);
     if (productExists) {
       throw new AppError('Já existe um produto cadastrado com esse nome', 400);
     }
     product.name = name;
     product.price = price;
     product.quantity = quantity;
-    await redisCache.invalidate('api-vendas-PRODUCT_LIST');
-    await productRepository.save(product);
+    await this.productsRepository.save(product);
     return product;
   }
 }

@@ -9,6 +9,7 @@ const validations = new OrderValidations();
 
 ordersRouter.use(isAuthenticated);
 
+ordersRouter.get('/', ordersController.index);
 ordersRouter.get('/:id', validations.showValidation, ordersController.show);
 ordersRouter.post('/', validations.createValidation, ordersController.create);
 
