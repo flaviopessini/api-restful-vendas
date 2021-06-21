@@ -24,7 +24,7 @@ class CreateSessionsService {
     if (!user) {
       throw new AppError('E-mail ou senha incorretos', 401);
     }
-    const passwordConfirmed = await await this.hashProvider.compareHash(
+    const passwordConfirmed = await this.hashProvider.compareHash(
       password,
       user.password,
     );
