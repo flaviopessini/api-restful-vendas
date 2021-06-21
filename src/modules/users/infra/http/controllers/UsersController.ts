@@ -8,11 +8,10 @@ import { container } from 'tsyringe';
 
 export default class UsersController {
   public async index(request: Request, response: Response): Promise<Response> {
-    let search = '';
-    const sortField = String(request.query.sortField);
-    if (request.query.search) {
-      search = String(request.query.search);
-    }
+    const search = request.query.search ? String(request.query.search) : '';
+    const sortField = request.query.sortField
+      ? String(request.query.sortField)
+      : 'name';
     const listUsers = container.resolve(ListUserService);
     const users = await listUsers.execute(search, sortField);
     return response.status(200).json(classToClass(users));

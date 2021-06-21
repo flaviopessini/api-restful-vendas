@@ -41,7 +41,7 @@ export default class SESMail {
 
     const { email, name } = mailConfig.defaults.from;
 
-    const message = await transporter.sendMail({
+    await transporter.sendMail({
       from: {
         name: from?.name || name,
         address: from?.email || email,

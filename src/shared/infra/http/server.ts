@@ -32,6 +32,8 @@ app.use(
       });
     }
 
+    console.log(error);
+
     // Se for erro desconhecido ou não tratado na aplicação.
     return response.status(500).json({
       status: 'error',
